@@ -1,0 +1,14 @@
+var expect = require('expect');
+var {generateMessage} = require('./message');
+
+describe('Generate Message',()=>{
+    it('should generate correct message object',()=>{
+        var from = 'Rak';
+        var text = 'Some text',
+        var msg = generateMessage(from,text);
+
+        expect(msg.createdAt).toBeA('number');
+        expect(msg).toInclude({from,text});
+        
+    });
+});
