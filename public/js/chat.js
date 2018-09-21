@@ -38,13 +38,13 @@ socket.on('disconnect',function(){
 });
 
 socket.on('updateUserList',function(users){
-        var ol = jQuery('<ol></ol>');
+        var ul = jQuery('<ul></ul>');
 
         users.forEach(function (user){
-                ol.append(jQuery('<li></li>').text(user));
+                ul.append(jQuery('<li></li>').text(user));
         });
 
-        jQuery('#users').html(ol); 
+        jQuery('#users').html(ul); 
 });
 
 //msg from server
@@ -79,8 +79,8 @@ jQuery('#message-form').on('submit',function(e){
         e.preventDefault();
         
         var messageTextBox = jQuery('[name=message]');
+        
         socket.emit('createMessage',{
-                from:'User',
                 text: messageTextBox.val()
         },function(){
                 messageTextBox.val('')
