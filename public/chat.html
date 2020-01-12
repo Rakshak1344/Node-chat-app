@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="/css/styles.css">
-        <title>Join | ChatApp</title>
-    </head>
-    <body class="chat">
-        <div class="chat__sidebar">
-            <h3>People</h3>
-            <div id="users"></div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Join | ChatApp</title>
+</head>
+
+<body class="chat">
+    <div class="chat__sidebar">
+        <h3>People</h3>
+        <div id="users"></div>
+    </div>
+
+    <div class="chat__main">
+        <ol id="messages" class="chat__messages"></ol>
+
+        <div class="chat__footer">
+            <form id="message-form">
+                <input name="message" type="text" placeholder="Message" autofocus autocomplete="off" />
+                <button>Send</button><br>
+            </form>
+            <br><button id="send-location">Send location</button>
         </div>
 
-        <div class="chat__main">
-            <ol id="messages" class="chat__messages"></ol>
-            
-            <div class="chat__footer">
-                <form id="message-form">
-                    <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
-                    <button>Send</button><br>
-                </form>
-                <br><button id="send-location">Send location</button>
-            </div>
-            
-        </div>
+    </div>
 
-        <script id="message-template" type="text/template">
+    <script id="message-template" type="text/template">
         <li class="message">
             <div class="message__title">
                 <h4>{{from}}</h4>
@@ -37,7 +40,7 @@
         </li>
         </script>
 
-        <script id="location-message-template" type="text/template">
+    <script id="location-message-template" type="text/template">
             <li class="message">
                 <div class="message__title">
                     <h4>{{from}}</h4>
@@ -48,13 +51,12 @@
                 </div>
             </li>
             </script>
-        
-        <script src="./socket.io/socket.io.js"></script>
-        <script src="./js/libs/jquery-3.3.1.min.js"></script>
-        <script src="./js/libs/moment.js"></script>
-        <script src="./js/libs/mustache.js"></script>
-        <script src="./js/libs/deparam.js"></script>
-        <script src="./js/chat.js"></script>
-        
-    </body>
+
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/libs/jquery-3.3.1.min.js"></script>
+    <script src="./js/libs/moment.js"></script>
+    <script src="./js/libs/mustache.js"></script>
+    <script src="./js/libs/deparam.js"></script>
+    <script src="./js/chat.js"></script>
+</body>
 </html>

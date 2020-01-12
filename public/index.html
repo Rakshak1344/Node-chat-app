@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <title>Join | ChatApp</title>
-    </head>
-    <body class="centered-form">
-        <div class="centered-form__form">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+    <title>Chat|Bot</title>
+   
+</head>
+
+<body class="centered-form"><!--style="background-image: url('..\public\assets\doc.png');">-->
+    
+    <div class="centered-form">
+            <!-- <div style="color: whitesmoke; "><h1>Chat | Bot  </h1></div> -->
+        <!-- <h1 style="color: whitesmoke; letter-spacing: 5px" class="glass-effect"> </h1> -->
+        <h1 style="color: whitesmoke; letter-spacing: 5px " class="glass-effect"> Private chat <b style="color: red; font-size: 100px">|</b> Connect at your finger tip </h1>
+
+    <div class="centered-form__form">
         <form action="/chat.html">
             <div class="form-field">
-                <h3>Join a Chat</h3>
+            </div>
+            
+            <div class="form-field">
+                <label >Your Name</label>
+                <input type="text" name="name" autofocus id='name' />
+            </div>
+            <!-- <div class="form-field">
+                    <label>Section Line</label>
+                    <input type="text" name="room" id='selectedLine'/>
+            </div> -->
+
+            <div class="form-group">
+                <label style="font-size: 5em ">Select Chat line</label>
+                
+                <select class="form-control" id="helpLine" name="room" style="height:50px; border-radius:10px;">
+                    <option value='bline' style="font-size: 15px">Business line</option>
+                    <option vlaue='sline' style="font-size: 15px">Support line</option>
+                </select>
+                <br>
             </div>
             <div class="form-field">
-                <label>Display name</label>
-                <input type="text" name="name" autofocus/>
-            </div>
-            <div class="form-field">
-                <label>Room name</label>
-                <input type="text" name="room"/>
-            </div>
-            <div class="form-field">
-                <button>Join</button>
+                <button style="color: white; border-radius: 10px; height: 50px;
+                font-size: 20px;">Get Connected</button>
             </div>
         </form>
-        </div>
-    </body>
+    </div>
+    </div>
+</body>
+
 </html>
