@@ -72,9 +72,13 @@ button:disabled {
 
 .glass-effect{
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
-    background-color: transparent;
+    /* background-color:transparent; */
     backdrop-filter: blur(5px);
-    padding: 144px;
+    padding: 10px;
+    margin-top: 11px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(to right, #0575E6, #ce3232);
 }
 
 .centered-form__form {
@@ -83,7 +87,8 @@ button:disabled {
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px;
-    width: 300px
+    width: 230px;
+    height: 500px;
 }
 
 .centered-Selection {
@@ -92,10 +97,10 @@ button:disabled {
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px;
-    width: 190px
+    width: 190px;
 }
 .form-field {
-    margin: 20px 0
+    margin: 30px 0
 }
 
 .form-field>* {
@@ -107,6 +112,7 @@ button:disabled {
     display: block;
     margin-bottom: 7px;
     font-size: 50px;
+    font-size: 3em;
 }
 
 .form-field input, .form-field select {
@@ -115,6 +121,10 @@ button:disabled {
     outline: none;
     font-size: 20px;
     padding: 10px;
+}
+
+.form-group label{
+    font-size: 3em;
 }
 
 .chat {
